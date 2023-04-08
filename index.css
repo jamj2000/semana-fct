@@ -3,12 +3,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: right bottom;
-    background-color: #eeeeee;
+    background-color:rgb(250, 253, 255);
     font-family: sans-serif;
 }
 
 h1,h2,
-h4 {
+h4,h5 {
     text-align: center;
 }
 
@@ -33,12 +33,19 @@ button {
     transition-duration: 0.4s;
     background-color: white;
     color: black;
-    border: 2px solid #4CAF50;
+    border: 2px solid darkblue;
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: darkblue;
     color: white;
+}
+
+div {
+    border-radius: 0.3em;
+    border: solid 1px darkblue;
+    background-color: aliceblue;
+    opacity: 0.8;
 }
 
 .alumnado {
@@ -47,10 +54,10 @@ button:hover {
 }
 .actividades {   
     padding: 10px;        
-    width: 100%;   
+    width: 100%; 
 }
 .actividades option {
     width: 100%;
 }
 
-textarea {margin-top: 10px;}
+textarea {margin-top: 10px; margin-bottom: 10px;}
