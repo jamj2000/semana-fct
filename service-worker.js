@@ -1,5 +1,5 @@
 // Nombre de la caché
-const CACHE_NAME = 'semana-fct-v2';
+const CACHE_NAME = 'semana-fct-v1';
 
 // Archivos necesarios para el funcionamiento offline
 const CACHE_ASSETS = [
@@ -63,7 +63,15 @@ self.addEventListener('activate', function (e) {
 self.addEventListener('fetch', function (e) {
   console.log("[Service Worker] * Fetch.");
 
-  e.respondWith(caches.match(e.request))
+  e.respondWith(
+    fetch(e.request)
+      .catch(() => {
+        return caches.open(CACHE_NAME)
+          .then((cache) => {
+            return cache.match(e.request);
+          });
+      })
+  );
 
 });
 
