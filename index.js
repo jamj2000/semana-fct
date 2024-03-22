@@ -274,7 +274,7 @@ async function createPDF() {
     // TODO: A mejorar el siguiente código !!
     // La ficha 1 corresponde a la semana 14 en el año 2024 para todos los ciclos
     // salvo FPB que corresponde con la semana 16
-    let numFicha = datosAlumno.CICLO != 'FPB' ? numSemana - 13 : numSemana - 13;
+    let numFicha = datosAlumno.CICLO != 'FPB' ? numSemana - 13 : numSemana - 16;
 
     let inicio = getDateOfISOWeek(numSemana, numAnno)
     let final = new Date(inicio)
@@ -293,7 +293,7 @@ async function createPDF() {
     form.getTextField('year').setText(numAnno.toString());
 
 
-    form.getTextField('centroDocente').setText('IES Luis Vélez de Guevara');
+    form.getTextField('centroDocente').setText('IES Inca Garcilaso');
     form.getTextField('centroLaboral').setText(datosAlumno.CENTROLABORAL);
 
     form.getTextField('alumno').setText(datosAlumno.ALUMNO);
