@@ -331,6 +331,9 @@ async function createPDF() {
         case 'DAW':
             ciclo = 'Desarrollo de aplicaciones web';
             grado = 'Superior'; break;
+        case 'DAM':
+            ciclo = 'Desarrollo de aplicaciones multiplataforma';
+            grado = 'Superior'; break;         
         default:
     }
 
