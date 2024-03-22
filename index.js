@@ -270,10 +270,11 @@ async function createPDF() {
 
     let numAnno = semana.value.slice(0, 4)
     let numSemana = semana.value.slice(6)
-    
-    // La ficha 1 corresponde a la semana 11 en el año 2023 para todos los ciclos
+
+    // TODO: A mejorar el siguiente código !!
+    // La ficha 1 corresponde a la semana 14 en el año 2024 para todos los ciclos
     // salvo FPB que corresponde con la semana 16
-    let numFicha = datosAlumno.CICLO != 'FPB' ? numSemana - 10 : numSemana - 13;
+    let numFicha = datosAlumno.CICLO != 'FPB' ? numSemana - 13 : numSemana - 13;
 
     let inicio = getDateOfISOWeek(numSemana, numAnno)
     let final = new Date(inicio)
