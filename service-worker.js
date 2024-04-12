@@ -1,5 +1,5 @@
 // Nombre de la caché
-const CACHE_NAME = 'semana-fct-v1';
+const CACHE_NAME = 'semana-fct-v4';
 
 // Archivos necesarios para el funcionamiento offline
 const CACHE_ASSETS = [
@@ -12,7 +12,11 @@ const CACHE_ASSETS = [
   '/assets/Ficha.pdf',
   '/assets/Neucha-Regular.ttf',
   '/assets/alumnado.csv',
-  '/assets/actividades.csv'
+  '/assets/actividades.csv',
+  '/js/download.js',
+  '/js/papaparse.min.js',
+  '/js/pdf-lib.min.js',
+  '/js/fontkit.umd.min.js',
 ];
 
 // INSTALL
