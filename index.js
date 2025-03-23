@@ -73,7 +73,7 @@ const mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
     "Julio", "Agosto", "Septiembre", "Octobre", "Noviembre", "Diciembre"
 ];
 
-function generarOpcion (actividad) {
+function generarOpcion(actividad) {
     const option = document.createElement('option');
     option.value = actividad; option.text = actividad;
     return option;
@@ -274,7 +274,8 @@ async function createPDF() {
     // TODO: A mejorar el siguiente código !!
     // La ficha 1 corresponde a la semana 14 en el año 2024 para todos los ciclos
     // salvo FPB que corresponde con la semana 16
-    let numFicha = datosAlumno.CICLO != 'SMR' ? numSemana - 13 : numSemana - 11;
+    // let numFicha = datosAlumno.CICLO != 'SMR' ? numSemana - 13 : numSemana - 11;
+    let numFicha = numSemana - 12;
 
     let inicio = getDateOfISOWeek(numSemana, numAnno)
     let final = new Date(inicio)
@@ -333,7 +334,7 @@ async function createPDF() {
             grado = 'Superior'; break;
         case 'DAM':
             ciclo = 'Desarrollo de aplicaciones multiplataforma';
-            grado = 'Superior'; break;         
+            grado = 'Superior'; break;
         default:
     }
 
@@ -342,11 +343,11 @@ async function createPDF() {
 
     form.getTextField('lunes').setText(actividadesLunes1.value + '\n' + actividadesLunes2.value);
     form.getTextField('tiempoLunes').setText(verHorasLunes1.innerHTML + '\n' + verHorasLunes2.innerHTML);
-    form.getTextField('observacionesLunes').setText(observacionesLunes1.value + '\n' + observacionesLunes2.value) ;
+    form.getTextField('observacionesLunes').setText(observacionesLunes1.value + '\n' + observacionesLunes2.value);
 
     form.getTextField('martes').setText(actividadesMartes1.value + '\n' + actividadesMartes2.value);
     form.getTextField('tiempoMartes').setText(verHorasMartes1.innerHTML + '\n' + verHorasMartes2.innerHTML);
-    form.getTextField('observacionesMartes').setText(observacionesMartes1.value + '\n' + observacionesMartes2.value );
+    form.getTextField('observacionesMartes').setText(observacionesMartes1.value + '\n' + observacionesMartes2.value);
 
     form.getTextField('miercoles').setText(actividadesMiercoles1.value + '\n' + actividadesMiercoles2.value);
     form.getTextField('tiempoMiercoles').setText(verHorasMiercoles1.innerHTML + '\n' + verHorasMiercoles2.innerHTML);
@@ -366,5 +367,5 @@ async function createPDF() {
 
     const nombreArchivoPDF = alumnado.value.replace(/\s/g, '') + "-Semana-" + numFicha;
     download(pdfBytes, nombreArchivoPDF, "application/pdf");
-    
+
 }
