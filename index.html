@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,9 +15,9 @@
     <script src="./js/papaparse.min.js"></script>
     <script src="./js/pdf-lib.min.js"></script>
     <script src="./js/fontkit.umd.min.js"></script>
-    
+
     <script defer src="index.js"></script>
-    
+
     <link rel="shortcut icon" href="favicon.png">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="index.css">
@@ -27,99 +28,119 @@
     <h5>IES Inca Garcilaso (Montilla)</h5>
     <hr>
     <div>
-        <h4>Alumno/a y Semana</h4>   
+        <h4>Alumno/a y Semana</h4>
         <!-- <input id="alumno" type="text" list="alumnado" size="60" placeholder="Nombre de alumno/a" required>
         <datalist id="alumnado"></datalist> -->
-    
+
         <select name="alumnado" id="alumnado" class="alumnado"> </select>
-        <input type="week" id="semana" value="2024-W14" min="2024-W12" max="2024-W25" >
+        <input type="week" id="semana" value="2026-W38" min="2025-W38" max="2025-W51">
     </div>
-    <hr><h2>LUNES</h2><h4>Actividades/Puestos formativos</h4>   
+    <hr>
+    <h2>LUNES</h2>
+    <h4>Actividades/Puestos formativos</h4>
     <div>
         <select id="actividadesLunes1" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasLunes1" style="width: 5rem"> </p>
+        <h4>Horas:</h4>
+        <p id="verHorasLunes1" style="width: 5rem"> </p>
         <input type="range" id="horasLunes1" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesLunes1" cols="60" rows="5"></textarea>
         <select id="actividadesLunes2" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasLunes2" style="width: 5rem"> </p>
+        <h4>Horas:</h4>
+        <p id="verHorasLunes2" style="width: 5rem"> </p>
         <input type="range" id="horasLunes2" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesLunes2" cols="60" rows="5"></textarea>
     </div>
-    <hr><h2>MARTES</h2><h4>Actividades/Puestos formativos</h4>   
-    <div> 
+    <hr>
+    <h2>MARTES</h2>
+    <h4>Actividades/Puestos formativos</h4>
+    <div>
         <select id="actividadesMartes1" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasMartes1" style="width: 5rem"></p>
+        <h4>Horas:</h4>
+        <p id="verHorasMartes1" style="width: 5rem"></p>
         <input type="range" id="horasMartes1" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesMartes1" cols="60" rows="5"></textarea>
         <select id="actividadesMartes2" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasMartes2" style="width: 5rem"></p>
+        <h4>Horas:</h4>
+        <p id="verHorasMartes2" style="width: 5rem"></p>
         <input type="range" id="horasMartes2" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesMartes2" cols="60" rows="5"></textarea>
     </div>
-    <hr><h2>MIÉRCOLES</h2><h4>Actividades/Puestos formativos</h4>   
-    <div>        
+    <hr>
+    <h2>MIÉRCOLES</h2>
+    <h4>Actividades/Puestos formativos</h4>
+    <div>
         <select id="actividadesMiercoles1" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasMiercoles1" style="width: 5rem"></p>
+        <h4>Horas:</h4>
+        <p id="verHorasMiercoles1" style="width: 5rem"></p>
         <input type="range" id="horasMiercoles1" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesMiercoles1" cols="60" rows="5"></textarea>
         <select id="actividadesMiercoles2" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasMiercoles2" style="width: 5rem"></p>
+        <h4>Horas:</h4>
+        <p id="verHorasMiercoles2" style="width: 5rem"></p>
         <input type="range" id="horasMiercoles2" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesMiercoles2" cols="60" rows="5"></textarea>
     </div>
-    <hr><h2>JUEVES</h2><h4>Actividades/Puestos formativos</h4>   
-    <div>        
+    <hr>
+    <h2>JUEVES</h2>
+    <h4>Actividades/Puestos formativos</h4>
+    <div>
         <select id="actividadesJueves1" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasJueves1" style="width: 5rem"></p>
+        <h4>Horas:</h4>
+        <p id="verHorasJueves1" style="width: 5rem"></p>
         <input type="range" id="horasJueves1" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesJueves1" cols="60" rows="5"></textarea>
         <select id="actividadesJueves2" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasJueves2" style="width: 5rem"></p>
+        <h4>Horas:</h4>
+        <p id="verHorasJueves2" style="width: 5rem"></p>
         <input type="range" id="horasJueves2" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesJueves2" cols="60" rows="5"></textarea>
     </div>
-    <hr><h2>VIERNES</h2><h4>Actividades/Puestos formativos</h4>   
-    <div>        
+    <hr>
+    <h2>VIERNES</h2>
+    <h4>Actividades/Puestos formativos</h4>
+    <div>
         <select id="actividadesViernes1" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasViernes1" style="width: 5rem"></p>
+        <h4>Horas:</h4>
+        <p id="verHorasViernes1" style="width: 5rem"></p>
         <input type="range" id="horasViernes1" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesViernes1" cols="60" rows="5"></textarea>
         <select id="actividadesViernes2" class="actividades"> </select>
-        <h4>Horas:</h4><p id="verHorasViernes2" style="width: 5rem"></p>
+        <h4>Horas:</h4>
+        <p id="verHorasViernes2" style="width: 5rem"></p>
         <input type="range" id="horasViernes2" min="0" max="480" value="0" step="5">
         <h4>Observaciones: </h4>
         <textarea id="observacionesViernes2" cols="60" rows="5"></textarea>
     </div>
     <hr>
     <div>
-        <button onclick="createPDF()">Descargar Ficha PDF</button> 
+        <button onclick="createPDF()">Descargar Ficha PDF</button>
     </div>
 
     <noscript>
-		<p> Este sitio necesita Javascript para funcionar. </p>
-	</noscript>
-	<script>
-		// Si está soportado serviceWorker por el navegador
-		if ('serviceWorker' in navigator) {
-		  window.addEventListener('load', () => {
-			navigator.serviceWorker
-			  .register('./service-worker.js')
-			  .then(reg => console.log('[Service Worker] * Registrado.'))
-			  .catch(err => console.log(`[Service Worker] * Error: ${err}`));
-		  });
-		}
-	  </script>
-	
-	  <script src="service-worker.js"></script>    
+        <p> Este sitio necesita Javascript para funcionar. </p>
+    </noscript>
+    <script>
+        // Si está soportado serviceWorker por el navegador
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker
+                    .register('./service-worker.js')
+                    .then(reg => console.log('[Service Worker] * Registrado.'))
+                    .catch(err => console.log(`[Service Worker] * Error: ${err}`));
+            });
+        }
+    </script>
+
+    <script src="service-worker.js"></script>
 
 </body>
 
