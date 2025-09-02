@@ -281,9 +281,9 @@ async function createPDF() {
 
     let numFicha = 1
     if (datosAlumno.CICLO == 'SMR')
-        numFicha = numSemana - SEMANA_INICIO_GRADO_MEDIO;
+        numFicha = numSemana - SEMANA_INICIO_GRADO_MEDIO + 1;
     else
-        numFicha = numSemana - SEMANA_INICIO_GRADO_SUPERIOR;
+        numFicha = numSemana - SEMANA_INICIO_GRADO_SUPERIOR + 1;
 
 
     let inicio = getDateOfISOWeek(numSemana, numAnno)
