@@ -276,8 +276,8 @@ async function createPDF() {
     // salvo FPB que corresponde con la semana 16
     // let numFicha = datosAlumno.CICLO != 'SMR' ? numSemana - 13 : numSemana - 11;
 
-    const SEMANA_INICIO_GRADO_MEDIO = 36
-    const SEMANA_INICIO_GRADO_SUPERIOR = 38
+    const SEMANA_INICIO_GRADO_MEDIO = 38
+    const SEMANA_INICIO_GRADO_SUPERIOR = 40
 
     let numFicha = 1
     if (datosAlumno.CICLO == 'SMR')
